@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "username": "Carol67",
+        "email": "Donnie.Cruickshank@yahoo.com",
+        "password": "1234",
+        "bookmarks": [
+            21,
+            13,
+            12,
+            14,
+            25
+        ],
+        "treksDone": [
+            10,
+            21,
+            24,
+            20,
+            19
+        ],
+        "avatar": "D:\\DEV\\04 - PROJECTS\\randogram-app-frontend\\src\\assets\\images\\profilelarge_photo_1628563694622_5a76957fd09c_bbb48fbd03.jpg",
+        "confirmed": true
+    },
+    {
+        "id": 2,
+        "username": "Akeem38",
+        "email": "Serenity64@yahoo.com",
+        "password": "1234",
+        "bookmarks": [
+            17,
+            23,
+            11,
+            23,
+            7
+        ],
+        "treksDone": [
+            11,
+            24,
+            24,
+            16,
+            15
+        ],
+        "avatar": "D:\\DEV\\04 - PROJECTS\\randogram-app-frontend\\src\\assets\\images\\profileqsdq_7a1c293d65.jpg",
+        "confirmed": true
+    },
+    {
+        "id": 3,
+        "username": "Alfonso.Shanahan",
+        "email": "Eveline.OConnell88@gmail.com",
+        "password": "1234",
+        "bookmarks": [
+            23,
+            1,
+            20,
+            7,
+            13
+        ],
+        "treksDone": [
+            14,
+            13,
+            17,
+            19,
+            9
+        ],
+        "avatar": "D:\\DEV\\04 - PROJECTS\\randogram-app-frontend\\src\\assets\\images\\profilelarge_photo_1628563694622_5a76957fd09c_bbb48fbd03.jpg",
+        "confirmed": true
+    },
+    {
+        "id": 4,
+        "username": "Janick_Larson",
+        "email": "Anastacio.DuBuque@yahoo.com",
+        "password": "1234",
+        "bookmarks": [
+            11,
+            9,
+            11,
+            1,
+            16
+        ],
+        "treksDone": [
+            7,
+            12,
+            11,
+            7,
+            25
+        ],
+        "avatar": "D:\\DEV\\04 - PROJECTS\\randogram-app-frontend\\src\\assets\\images\\profile05_2846559934.png",
+        "confirmed": true
+    }
+]

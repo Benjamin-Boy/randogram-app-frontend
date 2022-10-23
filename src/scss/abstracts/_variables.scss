@@ -1,0 +1,23 @@
+$primary-color: #fff;
+$secondary-color: #ff1990;
+$tertiary-color: #ffab03;
+
+$difficulty-color--easy: #c0ff53;
+$difficulty-color--medium: #ff9100;
+$difficulty-color--hard: #ff1313;
+
+$elevation-color--up: #67ff43;
+$elevation-color--down: #ff2e2e;
+
+$gray: #e7e7e7;
+
+$themes: (
+  "light": (
+    bg-color: #fff,
+    color: #201d21,
+  ),
+  "dark": (
+    bg-color: #201d21,
+    color: #fff,
+  ),
+);

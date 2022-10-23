@@ -1,0 +1,6 @@
+@use "./mixins" as *;
+
+// Creates theme generation function
+@function theme($key: "base0") {
+  @return map-get($theme-map, $key);
+}

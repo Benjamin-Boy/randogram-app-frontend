@@ -1,0 +1,60 @@
+@use "../../scss/abstracts" as *;
+
+.wrapper {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 25, 144, 1) 0%,
+    rgba(255, 25, 144, 0) 90%
+  );
+  padding: 0.18rem;
+  box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.8);
+  transform: translateY(-5%);
+}
+
+.navbar-container {
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem;
+  @include size(250px, "");
+
+  &-difficulty,
+  &-treks {
+    h4 {
+      margin-bottom: 0.5rem;
+    }
+
+    &-choice {
+      & label {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  & li {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+
+  &-filter {
+    transition: transform 200ms ease-in-out;
+
+    &:hover {
+      transform: translateX(0.5rem);
+    }
+  }
+
+  &-divider {
+    margin: 0.5rem 0;
+    height: 1px;
+    width: 90%;
+    background-color: $gray;
+  }
+
+  .logout {
+    display: flex;
+    justify-content: center;
+  }
+}

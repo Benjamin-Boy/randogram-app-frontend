@@ -1,0 +1,84 @@
+@use "../../scss/abstracts" as *;
+
+.featuring-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border: 1px solid transparent;
+  cursor: pointer;
+  @include size(380px, calc(100vh - 119px));
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 300ms ease-in-out;
+  }
+
+  &-background {
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7091037098433124) 0%,
+      rgba(46, 46, 46, 0) 23%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    color: $primary-color;
+    padding: 0.5rem;
+  }
+
+  &-header {
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0.5rem;
+  }
+
+  &-footer {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.5rem;
+
+    &-destination {
+      gap: 0.5rem;
+      color: #fff;
+    }
+  }
+
+  .icon {
+    color: $primary-color;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: $secondary-color;
+    }
+
+    &.difficulty {
+      color: $difficulty-color--easy;
+    }
+
+    &.bookmark {
+      opacity: 0.5;
+
+      &:hover {
+        color: $secondary-color;
+        opacity: 1;
+      }
+    }
+  }
+}

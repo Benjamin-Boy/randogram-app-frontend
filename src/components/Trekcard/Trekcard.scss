@@ -1,0 +1,229 @@
+@use "../../scss/abstracts" as *;
+
+.trekcard-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border: 1px solid transparent;
+  cursor: pointer;
+  @include size(290px, 290px);
+
+  transition: all 300ms 150ms ease-in-out;
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 300ms 150ms ease-in-out;
+  }
+
+  &-background {
+    display: flex;
+    align-items: flex-end;
+    height: 290px;
+    z-index: 1;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.42619054457720584) 22%,
+      rgba(0, 0, 0, 0) 46%
+    );
+    color: $primary-color;
+    padding: 0.6rem;
+    // transform: translateY(142%);
+    transform: translateY(28%);
+    transition: transform 300ms ease-in-out;
+  }
+
+  &-header {
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.5rem;
+
+    button {
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  &-footer {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &-trekdone-background {
+      z-index: 1;
+      position: absolute;
+      top: -198px;
+      left: 0;
+      width: 500px;
+      height: 500px;
+      background-color: #000;
+      opacity: 0.6;
+    }
+
+    &-trekdone-banner {
+      z-index: 2;
+      position: absolute;
+      top: -75px;
+      left: -15px;
+      width: 70px;
+      height: 15px;
+      background-color: $tertiary-color;
+      transform: rotate(-45deg);
+    }
+
+    &-trekdone-content {
+      position: absolute;
+      top: 125px;
+      left: 10px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: $tertiary-color;
+      font-weight: 700;
+    }
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      &-destination {
+        & > :nth-child(2) {
+          opacity: 0.65;
+        }
+      }
+    }
+
+    &-stats {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.3rem;
+
+      &-top,
+      &-bottom {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.3rem;
+
+        & > :nth-child(1),
+        & > :nth-child(2) {
+          display: flex;
+          align-items: center;
+        }
+
+        & > :nth-child(3) {
+          .easy {
+            color: $difficulty-color--easy;
+          }
+
+          .medium {
+            color: $difficulty-color--medium;
+          }
+
+          .hard {
+            color: $difficulty-color--hard;
+          }
+        }
+      }
+
+      &-description {
+        width: 80%;
+        opacity: 0.5;
+      }
+
+      &-goto {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .icon {
+    color: $primary-color;
+    font-size: 1.1rem;
+
+    &.difficulty--easy {
+      color: $difficulty-color--easy;
+    }
+
+    &.difficulty--medium {
+      color: $difficulty-color--medium;
+    }
+
+    &.difficulty--hard {
+      color: $difficulty-color--hard;
+    }
+
+    &.arrow-up {
+      color: $elevation-color--up;
+      font-size: 0.8rem;
+    }
+
+    &.arrow-down {
+      color: $elevation-color--down;
+      font-size: 0.8rem;
+    }
+
+    &.bookmark {
+      font-size: 1.5rem;
+      opacity: 0.5;
+
+      &:hover {
+        color: $secondary-color;
+        opacity: 1;
+      }
+    }
+
+    &.is-bookmarked {
+      font-size: 1.5rem;
+      color: $secondary-color;
+      opacity: 1;
+    }
+
+    &.trek-done {
+      font-size: 1.5rem;
+      opacity: 0.5;
+
+      &:hover {
+        color: $tertiary-color;
+        opacity: 1;
+      }
+    }
+
+    &.is-done {
+      font-size: 1.5rem;
+      color: $tertiary-color;
+      opacity: 1;
+    }
+  }
+
+  &:not(.trek-done):hover {
+    .trekcard-container-img {
+      transform: scale(0.9);
+      filter: brightness(0.9);
+    }
+
+    .trekcard-container-background {
+      transform: translateY(0%);
+    }
+  }
+}

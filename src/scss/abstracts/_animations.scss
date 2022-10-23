@@ -1,0 +1,28 @@
+// Animates Trek creation button in Navbar
+@keyframes createButtonScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+// Animates Navbar appearin/disappearing
+@keyframes navbarAppearing {
+  0% {
+    transform: translateY(-70%);
+  }
+  100% {
+    transform: translateY(33%);
+  }
+}
+
+@keyframes navbarDisappearing {
+  0% {
+    transform: translateY(33%);
+  }
+  100% {
+    transform: translateY(-70%);
+  }
+}

@@ -1,0 +1,9 @@
+@use "./abstracts" as *;
+@use "./base";
+@use "./pages";
+@use "./layouts";
+
+@include themed {
+  background-color: theme("bg-color");
+  color: theme("color");
+}

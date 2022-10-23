@@ -1,0 +1,49 @@
+@use "../../scss/abstracts" as *;
+
+.home-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 1.5rem;
+
+  &-trekcards {
+    height: calc(100vh - 120px);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    gap: 0.5rem;
+    overflow: auto;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-featuring {
+    position: sticky;
+    top: 80px;
+  }
+
+  &-navbar {
+    position: absolute;
+    top: 0;
+    right: 24px;
+    transform: translateY(-101%);
+
+    &.active {
+      animation: navbarAppearing 300ms forwards;
+    }
+
+    &.inactive {
+      animation: navbarDisappearing 300ms forwards;
+    }
+  }
+
+  .error {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,186 @@
+@use "../../scss/abstracts" as *;
+
+.header-container {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  position: sticky;
+  top: 0;
+  padding: 0 2rem;
+  gap: 1.5rem;
+
+  &-left {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  &-center {
+    flex-grow: 1;
+    width: 80%;
+
+    &-search {
+      background-color: $gray;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem;
+      padding-left: 0.8rem;
+      border-radius: 1.5rem;
+      height: 50px;
+      border: 2px solid transparent;
+
+      input {
+        font-size: 1.1rem;
+        border-radius: 1.1rem;
+        padding-left: 0.5rem;
+        width: 98%;
+        height: 90%;
+        cursor: text;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        border: 2px solid transparent;
+
+        &:focus {
+          border: 2px solid $secondary-color;
+        }
+      }
+
+      .search {
+        font-size: 1.2rem;
+        color: #5e5e5e;
+      }
+    }
+  }
+
+  &-right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+
+    &-theme {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid transparent;
+      border-radius: 20px;
+      padding: 0.1rem;
+
+      &:hover {
+        border: 2px solid $secondary-color;
+      }
+    }
+
+    &-user {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1.5rem;
+
+      &-username {
+        white-space: nowrap;
+        color: $gray;
+
+        & > h5 > span {
+          color: $secondary-color;
+          font-weight: bold;
+        }
+      }
+
+      &-avatar {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid transparent;
+
+        & img {
+          width: 3rem;
+          height: 3rem;
+
+          overflow: hidden;
+          object-fit: cover;
+        }
+
+        &.active {
+          border: 2px solid $secondary-color;
+
+          &:hover {
+            border: 2px solid $secondary-color;
+          }
+        }
+
+        &:hover {
+          border: 2px solid $gray;
+        }
+      }
+    }
+
+    &-login {
+      &-signin {
+        font-weight: 700;
+
+        & h5 {
+          white-space: nowrap;
+        }
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  &-navbar {
+    position: absolute;
+    top: 0;
+    right: 24px;
+    transform: translateY(-100%);
+
+    &.active {
+      transform: translateY(33%);
+      // animation: navbarAppearing 300ms forwards;
+    }
+
+    &.inactive {
+      animation: navbarDisappearing 300ms forwards;
+    }
+  }
+
+  .icon {
+    font-size: 1.8rem;
+
+    &.light {
+      color: $secondary-color;
+    }
+
+    &.active {
+      border: 2px solid $secondary-color;
+
+      &:hover {
+        border: 2px solid $secondary-color;
+      }
+    }
+
+    &.create {
+      &:hover {
+        animation: createButtonScale 200ms forwards;
+      }
+    }
+  }
+}
